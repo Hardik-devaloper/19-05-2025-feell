@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emai Poyave Lyrics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Emai Poyave</h1>
+
+    <!-- Audio Player -->
+    <audio controls autoplay loop>
+      <source src="[iSongs.info] 04 - Emai Poyave.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Lyrics with auto-scroll -->
+    <div class="lyrics-container">
+      <div class="lyrics">
+        <p>Emai Poyave<br>
+        Nee Vente Nenunte<br>
+        Emai Pothaane<br>
+        Nuvvantoo Lekunte</p>
+
+        <p>Neetho Prathi Page Nimpesaane<br>
+        Theravaka Mundhe<br>
+        Pusthakame Visiresaave<br>
+        Naalo Pravahinche Oopirive<br>
+        Aaviri Chesi Aayuvune Theesesaave</p>
+
+        <p>Ninu Veedi Ponandhi<br>
+        Naa Praaname<br>
+        Naa Oopirine Nilipedhi<br>
+        Nee Dhyaaname</p>
+
+        <p>Sagame Ne Migilunnaa<br>
+        Shaasanamidi Chebuthunna<br>
+        Pone Lene… Ninnodhile</p>
+
+        <p>Emai Poyave<br>
+        Nee Vente Nenunte<br>
+        Emai Pothaane<br>
+        Nuvvantu Lekunte</p>
+
+        <p>Etu Choodu Nuvve<br>
+        Etu Vellane<br>
+        Ne Leni Chote<br>
+        Nee Hrudhayame</p>
+
+        <p>Nuvu Leni Kala Kooda Raane Raadhe<br>
+        Kala Laaga Nuvu Maarake<br>
+        Maranaanni Aapeti Varame Neeve<br>
+        Virahaala Vishameeyake</p>
+
+        <p>Emai Poyaave<br>
+        Nee Vente Nenunte<br>
+        Emai Pothane<br>
+        Nuvvantu Lekunte</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Auto scroll lyrics
+    const lyricsContainer = document.querySelector('.lyrics-container');
+    const lyrics = document.querySelector('.lyrics');
+
+    let scrollPos = 0;
+
+    function autoScroll() {
+      scrollPos += 0.3; // Adjust scroll speed here
+
+      if (scrollPos > lyrics.scrollHeight - lyricsContainer.clientHeight) {
+        scrollPos = 0; // Reset scroll when bottom reached
+      }
+      lyricsContainer.scrollTop = scrollPos;
+      requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+  </script>
+</body>
+</html>
